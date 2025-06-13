@@ -1,10 +1,70 @@
-# Conline_Proj  
-*[Brief project description]*  
+# Conline
 
-## Features  
-- Feature 1  
-- Feature 2  
+Conline is a video conferencing application similar to Zoom, with an additional AI-powered emotion detection system that analyzes participants' emotions in real-time during meetings.
 
-## Setup  
-```bash
-git clone https://github.com/HopeRider/Conline_Proj.git
+## 🚀 Features
+
+- Video meetings via **ZeGcloud**
+- Real-time emotion detection with AI integration
+- Secure authentication using **Firebase Auth**
+- Emotion data and meeting recordings stored in **Firebase Storage**
+- Cross-platform support (Windows / Mac / Linux)
+- Simple one-command startup scripts
+
+## 🧠 AI Emotion Detection
+
+The emotion detection system uses a pre-trained machine learning model (`.h5`) served via **Flask**. Every 3 seconds, the user's camera frame is sent to the Flask server for prediction. The detected emotion is then sent back to the main application and displayed in real-time during the meeting.
+
+## 🛠 Technologies Used
+
+### Frontend:
+- **React.js**
+- **Elastic UI (EUI)**
+
+### Backend:
+- **Firebase Auth** - for user authentication
+- **Firebase Storage** - for storing meeting data and emotion analysis
+- **ZeGcloud** - for video meeting interface
+- **Flask** - serving the AI model
+- **TensorFlow / Keras** - for AI emotion detection model
+
+## 📂 Project Structure
+
+Conline/
+│
+├── App/conline/ # React frontend app
+├── Model/ # Flask server with AI model
+│
+├── README.md
+├── start.bat # Windows startup script
+└── start.sh # Mac/Linux startup script
+
+## ⚙️ How to Run
+
+### Simple One-Click Startup
+
+- **For Windows users:**
+
+  Just double-click on `start.bat`.
+
+- **For Mac/Linux users:**
+
+  ```bash
+  chmod +x start.sh
+  ./start.sh
+
+### Manual Startup (run components separately)
+1️⃣ Start Frontend:
+bash
+Copy
+Edit
+cd App/conline
+yarn install
+yarn start
+2️⃣ Start AI Model Server:
+bash
+Copy
+Edit
+cd Model/Video
+pip install -r requirements.txt
+python app.py
