@@ -7,9 +7,8 @@ Conline is a video conferencing application similar to Zoom, with an additional 
 - Video meetings via **ZeGcloud**
 - Real-time emotion detection with AI integration
 - Secure authentication using **Firebase Auth**
-- Emotion data and meeting recordings stored in **Firebase Storage**
-- Cross-platform support (Windows / Mac / Linux)
-- Simple one-command startup scripts
+- Emotion data stored in **Firebase Storage**
+
 
 ## 🧠 AI Emotion Detection
 
