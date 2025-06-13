@@ -27,17 +27,6 @@ The emotion detection system uses a pre-trained machine learning model (`.h5`) s
 - **Flask** - serving the AI model
 - **TensorFlow / Keras** - for AI emotion detection model
 
-## 📂 Project Structure
-
-Conline/
-│
-├── App/conline/ # React frontend app
-├── Model/ # Flask server with AI model
-│
-├── README.md
-├── start.bat # Windows startup script
-└── start.sh # Mac/Linux startup script
-
 ## ⚙️ How to Run
 
 ### Simple One-Click Startup
