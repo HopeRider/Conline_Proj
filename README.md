@@ -43,16 +43,59 @@ The emotion detection system uses a pre-trained machine learning model (`.h5`) s
 
 ### Manual Startup (run components separately)
 1️⃣ Start Frontend:
-bash
-Copy
-Edit
-cd App/conline
-yarn install
-yarn start
+```bash
+  cd App/conline
+  yarn start
+```
+
 2️⃣ Start AI Model Server:
-bash
-Copy
-Edit
-cd Model/Video
-pip install -r requirements.txt
-python app.py
+```bash
+  cd Model/Video
+  python app.py
+```
+
+# 📝 Text Emotion Detection Model
+
+In addition to our main real-time video emotion detection, we have also developed a **Text Emotion Prediction Model**.
+
+## 🚀 About
+
+- This model is designed to predict the emotion expressed in a given text (by analyzing comments sent during meetings).
+- Although it is not yet integrated into the main **Conline** application, we plan to add this feature in future versions to provide multi-modal emotion analysis (both video & text).
+- The model was developed and tested using **Streamlit**, providing a simple and interactive interface for experimentation.
+
+## ⚙️ How to Run
+
+1️⃣ Navigate to the model directory:
+
+```bash
+cd Model/Text
+run app.py
+```
+
+# ⚠️ Important Setup Instructions Before Running the Application
+
+Before running the **Conline** application, you need to configure both **Firebase** and **ZeGocloud** credentials to make sure the app can properly connect to the backend services.
+
+---
+
+## 🔑 1️⃣ Firebase Configuration
+
+You will need to modify the Firebase configuration object inside your frontend code.
+
+### Path:
+
+```bash
+Conline_Proj\App\conline\src\utils\firebaseConfig.ts
+```
+
+## 🔑 2️⃣ ZeGocloud Configuration
+
+You need to provide your appId and serverSecret.
+
+### Path:
+
+```bash
+Conline_Proj\App\conline\src\pages\joinMeeting.ts
+```
+
